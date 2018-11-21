@@ -51,6 +51,13 @@ Cinema.prototype.allFilmRunTime = function () {
   return result;
 };
 
+Cinema.prototype.filterBy = function (property, value) {
+  const films = this.films;
+  const results = films.filter((film) => {
+    return film[property] === value;
+  })
+  return results;
+};
 
 
 
